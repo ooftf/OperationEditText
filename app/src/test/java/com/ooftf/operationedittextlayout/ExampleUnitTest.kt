@@ -1,4 +1,4 @@
-package com.tf.oof.operationedittextlayout
+package com.ooftf.operationedittextlayout
 
 import org.junit.Test
 

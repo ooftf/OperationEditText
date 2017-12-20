@@ -1,4 +1,4 @@
-package com.tf.oof.operationedittextlayout
+package com.ooftf.operationedittextlayout
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

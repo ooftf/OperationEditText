@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.tf.oof.operation.OperationEditTextLayout
+    <com.ooftf.operation.OperationEditTextLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:delOperationEnabled="true"
@@ -19,9 +19,9 @@
             android:paddingLeft="16dp"
             android:layout_width="match_parent"
             android:layout_height="48dp" />
-    </com.tf.oof.operation.OperationEditTextLayout>
+    </com.ooftf.operation.OperationEditTextLayout>
 
-    <com.tf.oof.operation.OperationEditTextLayout
+    <com.ooftf.operation.OperationEditTextLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:delOperationEnabled="true"
@@ -31,5 +31,5 @@
             android:paddingLeft="16dp"
             android:layout_width="match_parent"
             android:layout_height="48dp" />
-    </com.tf.oof.operation.OperationEditTextLayout>
+    </com.ooftf.operation.OperationEditTextLayout>
 </LinearLayout>
