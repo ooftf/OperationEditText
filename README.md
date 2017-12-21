@@ -12,7 +12,7 @@ dependencies {
 		compile 'com.github.ooftf:OperationEditTextLayout:1.0.1'
 }
 ```
-#使用方式
+# 使用方式
 1.当OperationEditTextLayout只是一个EditText节点的时候
 ```xml
 <com.ooftf.operation.OperationEditTextLayout
@@ -49,7 +49,7 @@ dependencies {
         </LinearLayout>
 </com.ooftf.operation.OperationEditTextLayout>
 ```
-#属性
+# 属性
 icon_show：显示密码icon id
 icon_hide：隐藏密码icon id
 icon_del：清除密码icon id
