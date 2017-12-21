@@ -17,6 +17,7 @@ dependencies {
 1.当OperationEditTextLayout只是一个EditText节点的时候
 ```xml
 <com.ooftf.operation.OperationEditTextLayout
+	xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:delOperationEnabled="true"
