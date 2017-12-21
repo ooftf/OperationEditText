@@ -3,14 +3,12 @@
 # Gradle配置
 ```groovy
 allprojects {
-	repositories {
-		...
-		maven { url 'https://www.jitpack.io' }
-	}
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
 }
-
 dependencies {
-	compile 'com.github.ooftf:OperationEditTextLayout:1.0.1'
+    compile 'com.github.ooftf:OperationEditTextLayout:1.0.1'
 }
 ```
 # 使用方式
