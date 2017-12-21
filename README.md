@@ -30,7 +30,7 @@ dependencies {
             android:paddingLeft="@dimen/layout_edge_spacing" />
 </com.ooftf.operation.OperationEditTextLayout>
 ```
-2.当OperationEditTextLayout只是不止只有EditText节点的时候可以使用 editTextId 指定EditText
+2.当OperationEditTextLayout在不止只有EditText节点的时候可以使用 editTextId 指定EditText
 ```xml
 <com.ooftf.operation.OperationEditTextLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
