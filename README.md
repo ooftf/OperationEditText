@@ -1,7 +1,7 @@
 # OperationEditTextLayout
 在EditText右侧选择性添加密显按钮和删除按钮
 # Gradle配置
-···groovy
+```groovy
 allprojects {
 		repositories {
 			...
@@ -11,7 +11,7 @@ allprojects {
 dependencies {
 		compile 'com.github.ooftf:OperationEditTextLayout:1.0.1'
 }
-···
+```
 #使用方式
 1.当OperationEditTextLayout只是一个EditText节点的时候
 ```xml
@@ -29,7 +29,7 @@ dependencies {
 </com.ooftf.operation.OperationEditTextLayout>
 ```
 2.当OperationEditTextLayout只是不止只有EditText节点的时候可以使用 editTextId 指定EditText
-···xml
+```xml
 <com.ooftf.operation.OperationEditTextLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
