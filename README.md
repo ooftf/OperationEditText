@@ -3,13 +3,14 @@
 # Gradle配置
 ```groovy
 allprojects {
-		repositories {
-			...
-			maven { url 'https://www.jitpack.io' }
-		}
+	repositories {
+		...
+		maven { url 'https://www.jitpack.io' }
+	}
 }
+
 dependencies {
-		compile 'com.github.ooftf:OperationEditTextLayout:1.0.1'
+	compile 'com.github.ooftf:OperationEditTextLayout:1.0.1'
 }
 ```
 # 使用方式
@@ -50,9 +51,9 @@ dependencies {
 </com.ooftf.operation.OperationEditTextLayout>
 ```
 # 属性
-icon_show：显示密码icon id
-icon_hide：隐藏密码icon id
-icon_del：清除密码icon id
-maskOperationEnabled：是否开启密显转换功能
-delOperationEnabled：是否开启清除功能
-editTextId：指定EditText
+icon_show：显示密码icon id  
+icon_hide：隐藏密码icon id  
+icon_del：清除密码icon id  
+maskOperationEnabled：是否开启密显转换功能  
+delOperationEnabled：是否开启清除功能  
+editTextId：指定EditText  
