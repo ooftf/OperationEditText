@@ -5,9 +5,9 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.RelativeLayout
@@ -38,16 +38,19 @@ class OperationEditTextLayout : RelativeLayout {
     private var maskOperationEnabled = false
     private var delOperationEnabled = false
     private var editTextId = -1;
+    private var oprationPaddingRight = 0f;
     private lateinit var editText: EditText
     private fun obtainAttrs(attrs: AttributeSet) {
-        val attrsArray = context.obtainStyledAttributes(attrs, R.styleable.OperationEditText)
-        iconShowId = attrsArray.getResourceId(R.styleable.OperationEditText_icon_show, R.drawable.vector_drawable_attention_fill)
-        iconHideId = attrsArray.getResourceId(R.styleable.OperationEditText_icon_hide, R.drawable.vector_drawable_attention_forbid_fill)
-        iconDelId = attrsArray.getResourceId(R.styleable.OperationEditText_icon_del, R.drawable.vector_icon_del)
-        maskOperationEnabled = attrsArray.getBoolean(R.styleable.OperationEditText_maskOperationEnabled, false)
-        delOperationEnabled = attrsArray.getBoolean(R.styleable.OperationEditText_delOperationEnabled, false)
-        editTextId = attrsArray.getResourceId(R.styleable.OperationEditText_editTextId, -1)
+        val attrsArray = context.obtainStyledAttributes(attrs, R.styleable.OperationEditTextLayout)
+        iconShowId = attrsArray.getResourceId(R.styleable.OperationEditTextLayout_icon_show, R.drawable.vector_drawable_attention_fill)
+        iconHideId = attrsArray.getResourceId(R.styleable.OperationEditTextLayout_icon_hide, R.drawable.vector_drawable_attention_forbid_fill)
+        iconDelId = attrsArray.getResourceId(R.styleable.OperationEditTextLayout_icon_del, R.drawable.vector_icon_del)
+        maskOperationEnabled = attrsArray.getBoolean(R.styleable.OperationEditTextLayout_maskOperationEnabled, false)
+        delOperationEnabled = attrsArray.getBoolean(R.styleable.OperationEditTextLayout_delOperationEnabled, false)
+        editTextId = attrsArray.getResourceId(R.styleable.OperationEditTextLayout_editTextId, -1)
+        oprationPaddingRight = attrsArray.getDimension(R.styleable.OperationEditTextLayout_oprationPaddingRight,0f)
         attrsArray.recycle()
+
     }
 
     override fun onFinishInflate() {
@@ -140,12 +143,13 @@ class OperationEditTextLayout : RelativeLayout {
     var maskPassword = true
     private fun initViews() {
         LayoutInflater.from(context).inflate(R.layout.layout_edit_operation, this)
+        var container = findViewById<ViewGroup>(R.id.container)
+        container.setPadding(container.left,container.top,oprationPaddingRight.toInt(),container.bottom);
         delView = findViewById(R.id.del)
         maskView = findViewById(R.id.mask)
         delView.setImageResource(iconDelId)
         maskView.setImageResource(iconHideId)
         visibleControl()
-        gravity = Gravity.CENTER_VERTICAL
         maskPassword = editText.transformationMethod != null
         maskPassword()
     }

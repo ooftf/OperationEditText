@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:delOperationEnabled="true"
-        app:maskOperationEnabled="true">
+        app:maskOperationEnabled="true"
+        app:oprationPaddingRight="10dp">
 
         <EditText
             android:hint="请输入密码"

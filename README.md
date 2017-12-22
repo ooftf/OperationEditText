@@ -1,5 +1,7 @@
 # OperationEditTextLayout
 在EditText右侧选择性添加密显按钮和删除按钮
+# 效果图
+![](https://github.com/ooftf/OperationEditTextLayout/raw/master/demoImage/demo.gif)
 # Gradle配置
 ```groovy
 allprojects {
@@ -49,10 +51,13 @@ dependencies {
         </LinearLayout>
 </com.ooftf.operation.OperationEditTextLayout>
 ```
-# 属性
-icon_show：显示密码icon id  
-icon_hide：隐藏密码icon id  
-icon_del：清除密码icon id  
-maskOperationEnabled：是否开启密显转换功能  
-delOperationEnabled：是否开启清除功能  
-editTextId：指定EditText  
+# XML属性
+|属性名|描述|默认值|
+|---|---|---|
+|icon_show|显示密码icon id  |参照效果图|
+|icon_hide|隐藏密码icon id  |参照效果图|
+|icon_del|清除密码icon id  |参照效果图|
+|maskOperationEnabled|是否开启密显转换功能  |false|
+|delOperationEnabled|是否开启清除功能  |false|
+|editTextId|指定EditText  |无|
+|oprationPaddingRight|设置图标的右边距  （由于图标本身带有5dp的padding值，所以即使oprationPaddingRight设置为0，视觉上还会有5dp的距离）|0|
