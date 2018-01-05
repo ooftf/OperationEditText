@@ -32,9 +32,9 @@ class OperationEditTextLayout : RelativeLayout {
         obtainAttrs(attrs)
     }
 
-    private var iconShowId = R.drawable.vector_drawable_attention_fill
-    private var iconHideId = R.drawable.vector_drawable_attention_forbid_fill
-    private var iconDelId = R.drawable.vector_icon_del
+    private var drawableShowId = R.drawable.vector_drawable_attention_fill
+    private var drawableHideId = R.drawable.vector_drawable_attention_forbid_fill
+    private var drawableDelId = R.drawable.vector_icon_del
     private var maskOperationEnabled = false
     private var delOperationEnabled = false
     private var editTextId = -1;
@@ -42,24 +42,24 @@ class OperationEditTextLayout : RelativeLayout {
     private lateinit var editText: EditText
     private fun obtainAttrs(attrs: AttributeSet) {
         val attrsArray = context.obtainStyledAttributes(attrs, R.styleable.OperationEditTextLayout)
-        iconShowId = attrsArray.getResourceId(R.styleable.OperationEditTextLayout_icon_show, R.drawable.vector_drawable_attention_fill)
-        iconHideId = attrsArray.getResourceId(R.styleable.OperationEditTextLayout_icon_hide, R.drawable.vector_drawable_attention_forbid_fill)
-        iconDelId = attrsArray.getResourceId(R.styleable.OperationEditTextLayout_icon_del, R.drawable.vector_icon_del)
-        maskOperationEnabled = attrsArray.getBoolean(R.styleable.OperationEditTextLayout_maskOperationEnabled, false)
-        delOperationEnabled = attrsArray.getBoolean(R.styleable.OperationEditTextLayout_delOperationEnabled, false)
-        editTextId = attrsArray.getResourceId(R.styleable.OperationEditTextLayout_editTextId, -1)
-        oprationPaddingRight = attrsArray.getDimension(R.styleable.OperationEditTextLayout_oprationPaddingRight,0f)
+        drawableShowId = attrsArray.getResourceId(R.styleable.OperationEditTextLayout_oetl_drawableShow, drawableShowId)
+        drawableHideId = attrsArray.getResourceId(R.styleable.OperationEditTextLayout_oetl_drawableHide, drawableHideId)
+        drawableDelId = attrsArray.getResourceId(R.styleable.OperationEditTextLayout_oetl_drawableDel, drawableDelId)
+        maskOperationEnabled = attrsArray.getBoolean(R.styleable.OperationEditTextLayout_oetl_maskEnabled, maskOperationEnabled)
+        delOperationEnabled = attrsArray.getBoolean(R.styleable.OperationEditTextLayout_oetl_delEnabled, delOperationEnabled)
+        editTextId = attrsArray.getResourceId(R.styleable.OperationEditTextLayout_oetl_editTextId, editTextId)
+        oprationPaddingRight = attrsArray.getDimension(R.styleable.OperationEditTextLayout_oetl_oprationPaddingRight, oprationPaddingRight)
         attrsArray.recycle()
 
     }
 
     override fun onFinishInflate() {
         super.onFinishInflate()
-        if(editTextId != -1){
+        if (editTextId != -1) {
             editText = findViewById(editTextId)
-        }else if(getChildAt(0) is EditText){
+        } else if (getChildAt(0) is EditText) {
             editText = getChildAt(0) as EditText
-        }else{
+        } else {
             throw IllegalAccessException("OperationEditTextLayout 未找到EditText节点")
         }
         initViews()
@@ -96,7 +96,7 @@ class OperationEditTextLayout : RelativeLayout {
     }
 
     private fun toggleMaskState() {
-        if (maskPassword) {
+        if (isMaskPassword()) {
             unmaskPassword()
         } else {
             maskPassword()
@@ -109,18 +109,11 @@ class OperationEditTextLayout : RelativeLayout {
         } else {
             maskView.visibility = View.GONE
         }
-        calculatePadding()
     }
 
-    private fun calculatePadding() {
-       /* if (delView.left > 0) {
-            editText.setPadding(editText.paddingLeft, editText.paddingTop, editText.width - delView.left, editText.paddingBottom)
-        }*/
-    }
 
     fun hideMaskOperation() {
         maskView.visibility = View.GONE
-        calculatePadding()
     }
 
     fun showDelOperation() {
@@ -129,31 +122,28 @@ class OperationEditTextLayout : RelativeLayout {
         } else {
             delView.visibility = View.GONE
         }
-        calculatePadding()
     }
 
     fun hideDelOperation() {
         delView.visibility = View.GONE
-        calculatePadding()
     }
 
 
     lateinit var delView: ImageView
     lateinit var maskView: ImageView
-    var maskPassword = true
     private fun initViews() {
         LayoutInflater.from(context).inflate(R.layout.layout_edit_operation, this)
         var container = findViewById<ViewGroup>(R.id.container)
-        container.setPadding(container.left,container.top,oprationPaddingRight.toInt(),container.bottom);
+        container.setPadding(container.left, container.top, oprationPaddingRight.toInt(), container.bottom);
         delView = findViewById(R.id.del)
         maskView = findViewById(R.id.mask)
-        delView.setImageResource(iconDelId)
-        maskView.setImageResource(iconHideId)
+        delView.setImageResource(drawableDelId)
+        maskView.setImageResource(drawableHideId)
         visibleControl()
-        maskPassword = editText.transformationMethod != null
         maskPassword()
     }
 
+    fun isMaskPassword() = editText.transformationMethod != null
     private fun visibleControl() {
         if (editText.text.isNotEmpty()) {
             showMaskOperation()
@@ -166,8 +156,7 @@ class OperationEditTextLayout : RelativeLayout {
 
     private fun maskPassword() {
         if (!maskOperationEnabled) return
-        maskPassword = true
-        maskView.setImageResource(iconHideId)
+        maskView.setImageResource(drawableHideId)
         var selection = editText.selectionStart
         editText.transformationMethod = PasswordTransformationMethod.getInstance()
         editText.setSelection(selection)
@@ -175,8 +164,7 @@ class OperationEditTextLayout : RelativeLayout {
 
     private fun unmaskPassword() {
         if (!maskOperationEnabled) return
-        maskPassword = false
-        maskView.setImageResource(iconShowId)
+        maskView.setImageResource(drawableShowId)
         var selection = editText.selectionStart
         editText.transformationMethod = null
         editText.setSelection(selection)

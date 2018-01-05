@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="OperationEditTextLayout">
-        <attr name="icon_hide" format="reference"/>
-        <attr name="icon_show" format="reference"/>
-        <attr name="icon_del" format="reference"/>
-        <attr name="oprationPaddingRight" format="dimension"/>
-        <attr name="maskOperationEnabled" format="boolean"/>
-        <attr name="delOperationEnabled" format="boolean"/>
-        <attr name="editTextId" format="reference"/>
+        <attr name="oetl_drawableHide" format="reference" />
+        <attr name="oetl_drawableShow" format="reference" />
+        <attr name="oetl_drawableDel" format="reference" />
+        <attr name="oetl_oprationPaddingRight" format="dimension" />
+        <attr name="oetl_maskEnabled" format="boolean" />
+        <attr name="oetl_delEnabled" format="boolean" />
+        <attr name="oetl_editTextId" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="OperationEditText">
+        <attr name="oet_drawableHide" format="reference" />
+        <attr name="oet_drawableShow" format="reference" />
+        <attr name="oet_drawableDel" format="reference" />
+        <attr name="oet_delDrawableSize" format="dimension" />
+        <attr name="oet_maskDrawableSize" format="dimension" />
+        <attr name="oet_drawableMargin" format="dimension" />
+        <attr name="oet_maskEnabled" format="boolean" />
+        <attr name="oet_delEnabled" format="boolean" />
+
     </declare-styleable>
 </resources>

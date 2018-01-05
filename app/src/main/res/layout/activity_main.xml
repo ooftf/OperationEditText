@@ -11,26 +11,22 @@
     <com.ooftf.operation.OperationEditTextLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:delOperationEnabled="true"
-        app:maskOperationEnabled="true"
-        app:oprationPaddingRight="10dp">
+        app:oetl_delEnabled="true"
+        app:oetl_maskEnabled="true"
+        app:oetl_oprationPaddingRight="10dp">
 
         <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:hint="请输入密码"
-            android:paddingLeft="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="48dp" />
+            android:paddingLeft="16dp" />
     </com.ooftf.operation.OperationEditTextLayout>
 
-    <com.ooftf.operation.OperationEditTextLayout
+    <com.ooftf.operation.OperationEditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:delOperationEnabled="true"
-        app:maskOperationEnabled="true">
-
-        <EditText
-            android:paddingLeft="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="48dp" />
-    </com.ooftf.operation.OperationEditTextLayout>
+        android:layout_height="48dp"
+        android:paddingLeft="16dp"
+        app:oet_delEnabled="true"
+        app:oet_drawableMargin="8dp"
+        app:oet_maskEnabled="false" />
 </LinearLayout>
