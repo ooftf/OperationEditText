@@ -48,7 +48,7 @@ class OperationEditTextLayout : RelativeLayout {
         maskOperationEnabled = attrsArray.getBoolean(R.styleable.OperationEditTextLayout_oetl_maskEnabled, maskOperationEnabled)
         delOperationEnabled = attrsArray.getBoolean(R.styleable.OperationEditTextLayout_oetl_delEnabled, delOperationEnabled)
         editTextId = attrsArray.getResourceId(R.styleable.OperationEditTextLayout_oetl_editTextId, editTextId)
-        oprationPaddingRight = attrsArray.getDimension(R.styleable.OperationEditTextLayout_oetl_oprationPaddingRight, oprationPaddingRight)
+        oprationPaddingRight = attrsArray.getDimension(R.styleable.OperationEditTextLayout_oetl_paddingRight, oprationPaddingRight)
         attrsArray.recycle()
 
     }

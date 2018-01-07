@@ -4,7 +4,7 @@
         <attr name="oetl_drawableHide" format="reference" />
         <attr name="oetl_drawableShow" format="reference" />
         <attr name="oetl_drawableDel" format="reference" />
-        <attr name="oetl_oprationPaddingRight" format="dimension" />
+        <attr name="oetl_paddingRight" format="dimension" />
         <attr name="oetl_maskEnabled" format="boolean" />
         <attr name="oetl_delEnabled" format="boolean" />
         <attr name="oetl_editTextId" format="reference" />
