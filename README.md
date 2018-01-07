@@ -76,8 +76,8 @@ dependencies {
 |oet_drawableShow|显示密码icon id  |参照效果图|
 |oet_drawableHide|隐藏密码icon id  |参照效果图|
 |oet_drawableDel|清除密码icon id  |参照效果图|
-|oet_delDrawableSize| 清除图标的大小 |无|
-|oet_maskDrawableSize|密显图标的大小  |无|
+|oet_delDrawableSize| 清除图标的大小 |20dp|
+|oet_maskDrawableSize|密显图标的大小  |24dp|
 |oet_drawableMargin|清除图标和密显转换图标之间的距离|8dp|
 |oet_maskEnabled|是否开启密显转换功能  |false|
 |oet_delEnabled|是否开启清除功能  |false|
