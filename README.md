@@ -1,4 +1,4 @@
-# OperationEditTextLayout
+# OperationEditText
 在EditText右侧选择性添加密显按钮和删除按钮
 ## 效果图
 ![](https://github.com/ooftf/OperationEditTextLayout/raw/master/demoImage/demo.gif)
@@ -10,7 +10,7 @@ allprojects {
     }
 }
 dependencies {
-    compile 'com.github.ooftf:OperationEditTextLayout:1.0.3'
+    compile 'com.github.ooftf:OperationEditTextLayout:1.0.4'
 }
 ```
 ## 使用方式
