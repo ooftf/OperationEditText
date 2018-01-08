@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         app:oetl_delEnabled="true"
         app:oetl_maskEnabled="true"
-        app:oetl_oprationPaddingRight="10dp">
+        app:oetl_paddingRight="10dp">
 
         <EditText
             android:layout_width="match_parent"
