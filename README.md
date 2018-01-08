@@ -10,7 +10,7 @@ allprojects {
     }
 }
 dependencies {
-    compile 'com.github.ooftf:OperationEditTextLayout:1.0.4'
+    compile 'com.github.ooftf:OperationEditTextLayout:1.0.5'
 }
 ```
 ## 使用方式
