@@ -1,13 +1,19 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.ooftf'
 android {
     compileSdkVersion 26
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 26
     }
+}
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+artifacts {
+    archives sourcesJar
 }
 dependencies {
     compileOnly 'com.android.support:appcompat-v7:26.1.0'
