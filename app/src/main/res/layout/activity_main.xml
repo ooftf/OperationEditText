@@ -28,5 +28,5 @@
         android:paddingLeft="16dp"
         app:oet_delEnabled="true"
         app:oet_drawableMargin="8dp"
-        app:oet_maskEnabled="false" />
+        app:oet_maskEnabled="true" />
 </LinearLayout>

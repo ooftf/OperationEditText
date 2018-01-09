@@ -14,8 +14,8 @@ import android.widget.RelativeLayout
 
 
 /**
- *  删除按钮的大小为40dp
- *  隐藏转换按钮的大小为38dp
+ *
+ *  删除按钮,隐藏转换按钮的大小为28dp
  * Created by master on 2017/10/17 0017.
  */
 class OperationEditTextLayout : RelativeLayout {

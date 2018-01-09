@@ -17,8 +17,8 @@ class OperationEditText : EditText {
     private var drawableDelId = R.drawable.vector_icon_del
     private var maskEnabled = false
     private var delEnabled = false
-    private var drawableMaskSize = dip2px(context, 24f)
-    private var drawableDelSize = dip2px(context, 20f)
+    private var drawableMaskSize = dip2px(context, 20f)
+    private var drawableDelSize = dip2px(context, 17f)
     private var drawableMargin = dip2px(context, 8f)
 
     constructor(context: Context?) : super(context)
