@@ -32,9 +32,9 @@ class OperationEditTextLayout : RelativeLayout {
         obtainAttrs(attrs)
     }
 
-    private var drawableShowId = R.drawable.vector_drawable_attention_fill
-    private var drawableHideId = R.drawable.vector_drawable_attention_forbid_fill
-    private var drawableDelId = R.drawable.vector_icon_del
+    private var drawableShowId = OperationEditConfig.DefaultShowDrawableId
+    private var drawableHideId = OperationEditConfig.DefaultHideDrawableId
+    private var drawableDelId = OperationEditConfig.DelDefaultDrawableId
     private var maskOperationEnabled = false
     private var delOperationEnabled = false
     private var editTextId = -1;
