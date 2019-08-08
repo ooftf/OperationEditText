@@ -3,6 +3,7 @@
 ## 效果图
 ![](https://github.com/ooftf/OperationEditTextLayout/raw/master/demoImage/demo.gif)
 ## Gradle配置
+[![](https://jitpack.io/v/ooftf/OperationEditText.svg)](https://jitpack.io/#ooftf/OperationEditText)
 ```groovy
 allprojects {
     repositories {
