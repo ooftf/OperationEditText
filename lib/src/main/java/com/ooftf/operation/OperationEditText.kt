@@ -12,9 +12,9 @@ import android.widget.EditText
  * Created by 99474 on 2018/1/5 0005.
  */
 class OperationEditText : EditText {
-    private var drawableShowId = R.drawable.vector_drawable_attention_fill
-    private var drawableHideId = R.drawable.vector_drawable_attention_forbid_fill
-    private var drawableDelId = R.drawable.vector_icon_del
+    private var drawableShowId = OperationEditConfig.DefaultShowDrawableId
+    private var drawableHideId = OperationEditConfig.DefaultHideDrawableId
+    private var drawableDelId = OperationEditConfig.DelDefaultDrawableId
     private var maskEnabled = false
     private var delEnabled = false
     private var drawableMaskSize = dip2px(context, 20f)
